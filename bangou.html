@@ -18,7 +18,7 @@
 	input[type="search"] {
 		-webkit-appearance: textfield;
 		font-size: 16px;
-		margin: 0px 0px 36px 0px;
+		margin: 0px 0px 0px 0px;
 		background: #FFFFFE;
 	}
 	</style>
@@ -79,7 +79,7 @@
 			if (number.charAt(i) !== "0") {
 
             //add nonzero digit unless it's a one not in the ones place
-            if ((number.charAt(i) !== "1") || ((number.charAt(i) == "1") && (i == 0))) {
+            if ((number.charAt(i) !== "1") || ((number.charAt(i) == "1") && ((i!== 1) && (i!==2)))) {
             	prompt += digitToKanji[number.charAt(i)];
             	answer += digitToRomanization[number.charAt(i)];
             }
@@ -102,7 +102,7 @@
         }
     }
 
-    //replacements: sanbyaku, roppyaku, happyaku, sanzen, hassen
+    //replacements: sanbyaku, roppyaku, happyaku, issen, sanzen, hassen
     if (answer.indexOf("sanhyaku") > -1) {
     	var idx = answer.indexOf("sanhyaku");
     	answer = answer.substring(0, idx + 3) + "b" + answer.substring(idx + 4);
@@ -114,6 +114,10 @@
     if (answer.indexOf("hachihyaku") > -1) {
     	var idx = answer.indexOf("hachihyaku");
     	answer = answer.substring(0, idx + 2) + "pp" + answer.substring(idx + 6);
+    }
+    if (answer.indexOf("ichisen") > -1){
+    	var idx = answer.indexOf("ichisen");
+    	answer = answer.substring(0,idx+1) + "s" + answer.substring(idx+4);
     }
     if (answer.indexOf("sansen") > -1) {
     	var idx = answer.indexOf("sansen");
@@ -129,7 +133,6 @@
 
 
 //checks string 'response' against the answer value
-
 function checkAnswer(response) {
 	var cleansedString = "";
 	for (var i = 0; i < response.length; i++) {
@@ -142,7 +145,6 @@ function checkAnswer(response) {
 	}
 	return false;
 }
-
 
 
 $(document).ready(function () {
@@ -165,8 +167,8 @@ function chooseImage( imageArray ){
 	return imageArray[Math.floor(Math.random() * imageArray.length)];
 }
 
-$('button').on('click', function () {
-	var userResponse = $('#search').val();
+function processUserResponse(){
+	var userResponse = $('#search').val().toLowerCase();
 
 	if (checkAnswer(userResponse)) {
 		$('#search').val("");
@@ -179,26 +181,17 @@ $('button').on('click', function () {
 	}
 	newImage = "<img src='" + newImage + "'>";
 	document.getElementById('image').innerHTML = newImage;
+
+}
+
+$('button').on('click', function () {
+	processUserResponse();
 });
 
 $('#search').keypress(function (event) {
-
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	if (keycode == '13') {
-		var userResponse = $('#search').val();
-
-		var newImage = "";
-		if (checkAnswer(userResponse)) {
-			$('#search').val("");
-			document.getElementById('button').innerHTML = "Check";
-			newImage = chooseImage(yesGifs);
-			determineNumber();
-		} else {
-			document.getElementById('button').innerHTML = "Try again";
-			newImage = chooseImage(noGifs);
-		}
-		newImage = "<img src='" + newImage + "'>";
-		document.getElementById('image').innerHTML = newImage;
+		processUserResponse();
 	}
 });
 </script>
