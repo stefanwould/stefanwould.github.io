@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<title>Japanese Number Practice</title>
+	<style>
+	div {
+		font-family: helvetica;
+		font-size: 36px;
+		margin: 36px 12px 12px 12px;
+	}
+	div #bottom {
+		font-size: 10px;
+	}
+	body {
+		text-align: center;
+		background: #FFFEEF;
+	}
+	input[type="search"] {
+		-webkit-appearance: textfield;
+		font-size: 16px;
+		margin: 0px 0px 36px 0px;
+		background: #FFFFFE;
+	}
+	</style>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="kanji"></div>
+	<input type="search" id="search">
+	<button type="button" id="button">Check</button>
+	<div id="bottom" style="font-size:10px; bottom:5% ">エリカへ。毎日勉強しましょう！</div>
+	<script>
+	digitToKanji = {
+		"1": "一",
+		"2": "二",
+		"3": "三",
+		"4": "四",
+		"5": "五",
+		"6": "六",
+		"7": "七",
+		"8": "八",
+		"9": "九",
+		"10": "十"
+	}
+	digitToRomanization = {
+		"1": "ichi",
+		"2": "ni",
+		"3": "san",
+		"4": "yon",
+		"5": "go",
+		"6": "roku",
+		"7": "nana",
+		"8": "hachi",
+		"9": "kyuu",
+	}
+
+	var prompt = "";
+	var answer = "";
+
+
+
+	function determineNumber() {
+
+		var numDigits = 2;
+		for (var i = 0; i < 3; i++) {
+			if (Math.random() > 0.6) {
+				numDigits++;
+			}
+		}
+
+		var number = Math.random().toString().substring(2, 2 + numDigits);
+		answer = "";
+		prompt = "";
+		if (parseInt(number) == 0) {
+			number = "99999";
+		}
+		for (var i = numDigits - 1; i >= 0; i--) {
+			if (number.charAt(i) !== "0") {
+
+            //add nonzero digit unless it's a one not in the ones place
+            if ((number.charAt(i) !== "1") || ((number.charAt(i) == "1") && (i == 0))) {
+            	prompt += digitToKanji[number.charAt(i)];
+            	answer += digitToRomanization[number.charAt(i)];
+            }
+            if (i == 4) {
+            	prompt += "万";
+            	answer += "man";
+            }
+            if (i == 3) {
+            	prompt += "千";
+            	answer += "sen";
+            }
+            if (i == 2) {
+            	prompt += "百";
+            	answer += "hyaku";
+            }
+            if (i == 1) {
+            	prompt += "十";
+            	answer += "juu";
+            }
+        }
+    }
+
+    //replacements: sanbyaku, roppyaku, happyaku, sanzen, hassen
+    if (answer.indexOf("sanhyaku") > -1) {
+    	var idx = answer.indexOf("sanhyaku");
+    	answer = answer.substring(0, idx + 3) + "b" + answer.substring(idx + 4);
+    }
+    if (answer.indexOf("rokuhyaku") > -1) {
+    	var idx = answer.indexOf("rokuhyaku");
+    	answer = answer.substring(0, idx + 2) + "pp" + answer.substring(idx + 5);
+    }
+    if (answer.indexOf("hachihyaku") > -1) {
+    	var idx = answer.indexOf("hachihyaku");
+    	answer = answer.substring(0, idx + 2) + "pp" + answer.substring(idx + 6);
+    }
+    if (answer.indexOf("sansen") > -1) {
+    	var idx = answer.indexOf("sansen");
+    	answer = answer.substring(0, idx + 3) + "z" + answer.substring(idx + 4);
+    }
+    if (answer.indexOf("hachisen") > -1) {
+    	var idx = answer.indexOf("hachisen");
+    	answer = answer.substring(0, idx + 2) + "s" + answer.substring(idx + 5);
+    }
+
+    document.getElementById('kanji').innerHTML = prompt;
+}
+
+
+//checks string 'response' against the answer value
+
+function checkAnswer(response) {
+	var cleansedString = "";
+	for (var i = 0; i < response.length; i++) {
+		if (response.charAt(i) !== " ") {
+			cleansedString += response.charAt(i);
+		}
+	}
+	if (cleansedString == answer) {
+		return true;
+	}
+	return false;
+}
+
+
+
+$(document).ready(function () {
+	determineNumber()
+});
+
+
+
+$('button').on('click', function () {
+	var userResponse = $('#search').val();
+
+	if (checkAnswer(userResponse)) {
+		$('#search').val("");
+		document.getElementById('button').innerHTML = "Check";
+		determineNumber();
+	} else {
+		document.getElementById('button').innerHTML = "Try again";
+
+	}
+});
+
+$('#search').keypress(function (event) {
+
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if (keycode == '13') {
+		var userResponse = $('#search').val();
+
+		if (checkAnswer(userResponse)) {
+			$('#search').val("");
+			document.getElementById('button').innerHTML = "Check";
+			determineNumber();
+		} else {
+			document.getElementById('button').innerHTML = "Try again";
+		}
+	}
+});
+</script>
+</body>
+
+
