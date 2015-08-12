@@ -28,6 +28,7 @@
 	<div id="kanji"></div>
 	<input type="search" id="search">
 	<button type="button" id="button">Check</button>
+	<div id="image"></div>
 	<div id="bottom" style="font-size:10px; bottom:5% ">エリカへ。毎日勉強しましょう！</div>
 	<script>
 	digitToKanji = {
@@ -149,6 +150,20 @@ $(document).ready(function () {
 });
 
 
+var yesGifs = [];
+yesGifs.push("http://i.imgur.com/SS8nyjp.gif");
+yesGifs.push("http://oyster.ignimgs.com/wordpress/write.ign.com/6390/2013/07/kyoko_thumbs_up.gif");
+yesGifs.push("http://38.media.tumblr.com/tumblr_loln4quagE1qh01r8o1_400.gif");
+yesGifs.push("http://i.imgur.com/mvF8pjN.gif");
+
+var noGifs = [];
+noGifs.push("http://orig00.deviantart.net/b2f0/f/2013/133/c/1/naruto__are_you_kidding_me_gif_by_naruto_the_ninetails-d6541fl.gif");
+noGifs.push("http://media.giphy.com/media/GzbZoNlQuK2dy/giphy.gif");
+noGifs.push("http://31.media.tumblr.com/027e3d6a27cc7be55e240e41c66427df/tumblr_mo9cvnY8Te1svn9hfo1_400.gif");
+
+function chooseImage( imageArray ){
+	return imageArray[Math.floor(Math.random() * imageArray.length)];
+}
 
 $('button').on('click', function () {
 	var userResponse = $('#search').val();
@@ -156,11 +171,14 @@ $('button').on('click', function () {
 	if (checkAnswer(userResponse)) {
 		$('#search').val("");
 		document.getElementById('button').innerHTML = "Check";
+		newImage = chooseImage(yesGifs);
 		determineNumber();
 	} else {
 		document.getElementById('button').innerHTML = "Try again";
-
+		newImage = chooseImage(noGifs);
 	}
+	newImage = "<img src='" + newImage + "'>";
+	document.getElementById('image').innerHTML = newImage;
 });
 
 $('#search').keypress(function (event) {
@@ -169,13 +187,18 @@ $('#search').keypress(function (event) {
 	if (keycode == '13') {
 		var userResponse = $('#search').val();
 
+		var newImage = "";
 		if (checkAnswer(userResponse)) {
 			$('#search').val("");
 			document.getElementById('button').innerHTML = "Check";
+			newImage = chooseImage(yesGifs);
 			determineNumber();
 		} else {
 			document.getElementById('button').innerHTML = "Try again";
+			newImage = chooseImage(noGifs);
 		}
+		newImage = "<img src='" + newImage + "'>";
+		document.getElementById('image').innerHTML = newImage;
 	}
 });
 </script>
