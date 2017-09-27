@@ -1,0 +1,84 @@
+{
+    "heading": [
+        "PREPARE YOUR VELUM",
+        "GERMAN HAS A WORD FOR HOW",
+    ],
+
+    "response": [
+        "It's gonna blow Chomsky's mind",
+        "Give me a-fucking-nother one",
+        "Don't really give a fuck"
+    ],
+
+    "template": [
+        "@ling_adjective @language with @normal and @weird @speak_verb by @people_adj @people",
+    ],
+
+    "ling_adjective": [
+        "archaic",
+        "backwards",
+        "underwater",
+        "garbled",
+        "lexically conservative",
+        "standard",
+        "peripheral",
+        "pluricentric",
+        "diglossic",
+        "a divergent branch of",
+        "bored-sounding",
+        "melodic",
+        "uvular-heavy",
+        "awkward",
+        "stacatto"
+    ],
+
+    "language": [
+        "Basque",
+        "Classical Latin",
+        "Vulgar Latin",
+        "Dyirbal",
+        "Georgian",
+        "Japanese",
+        "Proto-Indo-European",
+        "Finnish",
+        "Sanskrit",
+        "Proto-Malayo-Polynesian",
+        "Tlingit",
+        "Skolt Sami",
+        "Danish",
+    ],
+
+    "normal": [
+        "a five vowel system",
+        "a seven vowel system",
+        "a three vowel system",
+    ],
+
+    "weird": [
+        "an evidential for smell",
+        "base two numerals"
+    ],
+
+    "speak_verb": [
+        "spoken",
+        "grunted",
+        "warbled",
+        "yodeled"
+    ],
+
+    "people_adj": [
+        "nomadic",
+        "sea-faring",
+        "agrarian",
+    ],
+    
+    "people": [
+        "tribes",
+        "sentient plants",
+        "herders",
+        "hunter-gatherers",
+        "feminist linguists",
+        "wugs"
+    ]
+
+}
