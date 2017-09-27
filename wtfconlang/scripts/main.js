@@ -14,12 +14,23 @@ $(function() {
         ],
 
         response: [
-            "Bah, A natlang's already done it, but worse"
+            "Bah, A natlang's already done it, except worse"
         ],
 
         template: [
-            "@langadj @lang with @reasonable and @unreasonable"
+            "@langadj @lang with @reasonable and @unreasonable",
+            "@langadj @lang and @lang with @reasonable and @unreasonable"
         ],
+
+        quant: [
+            "and a little",
+            "with some",
+            "with hints of",
+            "with influence from",
+            "influenced by",
+            "mixed with"
+        ],
+
         langadj: [
             "archaic",
             "backwards",
@@ -168,7 +179,7 @@ $(function() {
         "uvular africates",
         "null copula",
         "voiceless nasals",
-        "quadral person marking",
+        "quadral number marking",
         "metric vowel lengthening",
         "metric vowel deletion",
         "extensive onomatopoeia",
