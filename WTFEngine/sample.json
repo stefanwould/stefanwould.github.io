@@ -11,7 +11,7 @@
     ],
 
     "template": [
-        "@ling_adjective @language with @normal and @weird @speak_verb by @people_adj @people",
+        "@ling_adjective @language with @normal and @weird @speak_verb by @people_adj @people"
     ],
 
     "ling_adjective": [
