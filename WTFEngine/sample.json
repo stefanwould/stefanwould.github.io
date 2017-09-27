@@ -11,10 +11,10 @@
     ],
 
     "template": [
-        "@ling_adjective @language with @normal and @weird @speak_verb by @people_adj @people"
+        "@lingadjective @language with @normal and @weird @speakverb by @peopleadj @people"
     ],
 
-    "ling_adjective": [
+    "lingadjective": [
         "archaic",
         "backwards",
         "underwater",
@@ -59,14 +59,14 @@
         "base two numerals"
     ],
 
-    "speak_verb": [
+    "speakverb": [
         "spoken",
         "grunted",
         "warbled",
         "yodeled"
     ],
 
-    "people_adj": [
+    "peopleadj": [
         "nomadic",
         "sea-faring",
         "agrarian"
