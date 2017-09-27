@@ -11,7 +11,7 @@
     ],
 
     "template": [
-        "@lingadjective @language with @normal and @weird @speakverb by @peopleadj @people"
+        "@lingadjective @language"
     ],
 
     "lingadjective": [
@@ -46,39 +46,5 @@
         "Tlingit",
         "Skolt Sami",
         "Danish"
-    ],
-
-    "normal": [
-        "a five vowel system",
-        "a seven vowel system",
-        "a three vowel system"
-    ],
-
-    "weird": [
-        "an evidential for smell",
-        "base two numerals"
-    ],
-
-    "speakverb": [
-        "spoken",
-        "grunted",
-        "warbled",
-        "yodeled"
-    ],
-
-    "peopleadj": [
-        "nomadic",
-        "sea-faring",
-        "agrarian"
-    ],
-
-    "people": [
-        "tribes",
-        "sentient plants",
-        "herders",
-        "hunter-gatherers",
-        "feminist linguists",
-        "wugs"
     ]
-
 }
