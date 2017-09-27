@@ -45,13 +45,13 @@
         "Proto-Malayo-Polynesian",
         "Tlingit",
         "Skolt Sami",
-        "Danish",
+        "Danish"
     ],
 
     "normal": [
         "a five vowel system",
         "a seven vowel system",
-        "a three vowel system",
+        "a three vowel system"
     ],
 
     "weird": [
@@ -69,7 +69,7 @@
     "people_adj": [
         "nomadic",
         "sea-faring",
-        "agrarian",
+        "agrarian"
     ],
 
     "people": [
