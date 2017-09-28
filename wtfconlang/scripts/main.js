@@ -30,7 +30,7 @@ $(function() {
             "a combination of",
             "mostly",
             "a creole of",
-            "the descendent of a contact language between",
+            "the descendant of a contact language between",
             "Chomsky's worst nightmare of"
         ],
 
