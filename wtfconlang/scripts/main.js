@@ -20,7 +20,9 @@ $(function() {
 
         template: [
             "@langadj @lang with @reasonable and @unreasonable",
-            "@twolang @lang and @lang with @reasonable and @unreasonable"
+            "@twolang @lang and @lang with @reasonable and @unreasonable",
+            "a priori with @reasonable and @unreasonable",
+            "if speakers of @lang tried to learn @lang with @unreasonable"
         ],
 
         twolang: [
@@ -40,7 +42,7 @@ $(function() {
             "garbled",
             "lexically conservative",
             "your friendly neighborhood",
-            "not your mama's",
+            "not yo mama's",
             "run-of-the-mill",
             "a divergent branch of",
             "bored-sounding",
@@ -72,7 +74,8 @@ $(function() {
             "bowdlerized",
             "radical pro-drop",
             "mora-timed",
-            "diphthong-heavy"
+            "diphthong-heavy",
+            "low-fat"
         ],
         lang: [
             "Koine Greek",
@@ -158,7 +161,31 @@ $(function() {
             "Algonquian-Basque Pidgin",
             "Coptic",
             "Tok Pisin",
-            "Bislama"
+            "Bislama",
+            "Fulani",
+            "Luganda",
+            "Lesotho",
+            "Catalan",
+            "Kurdish",
+            "Kazakh",
+            "Proto-Japonic",
+            "Ainu",
+            "Italian",
+            "Yiddish",
+            "Hittite",
+            "Old Avestan",
+            "Armenian",
+            "Estonian",
+            "Albanian",
+            "Etruscan",
+            "Maori",
+            "Bengali",
+            "Javanese",
+            "Vietnamese",
+            "Hausa",
+            "Nepali",
+            "Kinyarwanda",
+            "Hiligaynon"
         ],
 
     reasonable: [
@@ -214,7 +241,12 @@ $(function() {
         "a high-vowel shift",
         "a low-vowel shift",
         "tongue-root harmony",
-        "Canadian-raising"
+        "Canadian raising",
+        "laryngeals",
+        "wh-movement",
+        "extensive clusivity marking",
+        "tone sandhi",
+        "unusual hiatus resolution strategies"
     ],
 
     unreasonable: [
@@ -254,7 +286,9 @@ $(function() {
         "an animacy hierarchy with cats at the top",
         "demonstratives that inflect for whether the referent is on fire",
         "a base-four counting system used only for yams",
-        "irrealis markers used only by decapitated persons"
+        "irrealis markers used only by decapitated persons",
+        "a special plural suffix for body parts scattered all over the place",
+        "an aspectual prefix meaning the action takes place while petting a dog"
     ],
 
     });
