@@ -7,10 +7,11 @@ $(function() {
 
         heading: [
             "Prepare your velums for my conlang",
-            "Your hard palate isn't ready for",
+            "Your hard palate isn't ready for my conlang",
             "My conlang brings all the wugs to the yard",
-            "When colorless green ideas sleep furiously, they dream of",
-            "Syntacticians do it with trees, I do it with my conlang",
+            "When colorless green ideas sleep furiously, they dream of my conlang",
+            "Syntacticians do it with trees; I do it with my conlang",
+            "He had in his possession a bunchberry plant; I have in my possession a conlang "
         ],
 
         response: [
@@ -19,16 +20,18 @@ $(function() {
 
         template: [
             "@langadj @lang with @reasonable and @unreasonable",
-            "@langadj @lang and @lang with @reasonable and @unreasonable"
+            "@twolang @lang and @lang with @reasonable and @unreasonable"
         ],
 
-        quant: [
-            "and a little",
-            "with some",
-            "with hints of",
-            "with influence from",
-            "influenced by",
-            "mixed with"
+        twolang: [
+            "a fusion of",
+            "the unholy lovechild of",
+            "a mix of",
+            "a combination of",
+            "mostly",
+            "a creole of",
+            "the descendent of a contact language between",
+            "Chomsky's worst nightmare of"
         ],
 
         langadj: [
@@ -36,6 +39,8 @@ $(function() {
             "backwards",
             "garbled",
             "lexically conservative",
+            "your friendly neighborhood",
+            "not your mama's",
             "run-of-the-mill",
             "a divergent branch of",
             "bored-sounding",
@@ -47,11 +52,11 @@ $(function() {
             "an innovative branch of",
             "a daughter language of",
             "a dialect of",
-            "a relative of",
+            "a sister language of",
             "whispered",
             "syllable-timed",
             "stress-timed",
-            "reconstructed",
+            "comparatively reconstructed",
             "head-final",
             "head-initial",
             "head-marking",
@@ -63,7 +68,11 @@ $(function() {
             "mostly",
             "sugar-free",
             "regularized",
-            "a future version of"
+            "a future version of",
+            "bowdlerized",
+            "radical pro-drop",
+            "mora-timed",
+            "diphthong-heavy"
         ],
         lang: [
             "Koine Greek",
@@ -138,13 +147,24 @@ $(function() {
             "Polish",
             "rGyalrong",
             "Icelandic",
-            "Homeric Greek"
+            "Homeric Greek",
+            "Canadian French",
+            "Swedish",
+            "Nuxalk",
+            "Tuvan",
+            "Piraha",
+            "Basque-Icelandic Pidgin",
+            "Haitian Creole",
+            "Algonquian-Basque Pidgin",
+            "Coptic",
+            "Tok Pisin",
+            "Bislama"
         ],
 
     reasonable: [
         "a five-vowel system",
         "a three-vowel system",
-        "seven-vowel phonemes",
+        "seven vowel phonemes",
         "free word order",
         "OSV word order",
         "OVS word order",
@@ -186,7 +206,15 @@ $(function() {
         "nasal harmony",
         "aspirated fricatives",
         "implosives",
-        "voiceless implosives"
+        "voiceless implosives",
+        "labio-velar harmony",
+        "syllable-final devoicing",
+        "a back-vowel shift",
+        "a front-vowel shift",
+        "a high-vowel shift",
+        "a low-vowel shift",
+        "tongue-root harmony",
+        "Canadian-raising"
     ],
 
     unreasonable: [
@@ -224,6 +252,9 @@ $(function() {
         "a special numeral system for garlic bread",
         "suppletive roots for common verbs if the agent is feline",
         "an animacy hierarchy with cats at the top",
+        "demonstratives that inflect for whether the referent is on fire",
+        "a base-four counting system used only for yams",
+        "irrealis markers used only by decapitated persons"
     ],
 
     });
