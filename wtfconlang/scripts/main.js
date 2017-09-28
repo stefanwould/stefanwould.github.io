@@ -45,8 +45,7 @@ $(function() {
             "not yo mama's",
             "run-of-the-mill",
             "a divergent branch of",
-            "bored-sounding",
-            "melodic",
+            "mellifluous",
             "angry-sounding",
             "staccato",
             "standard",
@@ -164,7 +163,7 @@ $(function() {
             "Bislama",
             "Fulani",
             "Luganda",
-            "Lesotho",
+            "Sotho",
             "Catalan",
             "Kurdish",
             "Kazakh",
@@ -185,7 +184,13 @@ $(function() {
             "Hausa",
             "Nepali",
             "Kinyarwanda",
-            "Hiligaynon"
+            "Hiligaynon",
+            "!Xoo",
+            "Classical Nahuatl",
+            "Raramuri",
+            "Tzotzil",
+            "Green Hmong",
+            "White Hmong"
         ],
 
     reasonable: [
@@ -246,7 +251,17 @@ $(function() {
         "wh-movement",
         "extensive clusivity marking",
         "tone sandhi",
-        "unusual hiatus resolution strategies"
+        "breathy-voiced nasals",
+        "noun classes based on edibility",
+        "regressive vowel harmony",
+        "ingressive vowels",
+        "monophthongization that leveled the old inflectional paradigms",
+        "Suffixaufnahme",
+        "lingolabial ejectives",
+        "labiodental stops",
+        "grammaticized rhinoglottophilic alternation",
+        "hairy consonant clusters",
+        "extensive borrowing"
     ],
 
     unreasonable: [
@@ -288,7 +303,14 @@ $(function() {
         "a base-four counting system used only for yams",
         "irrealis markers used only by decapitated persons",
         "a special plural suffix for body parts scattered all over the place",
-        "an aspectual prefix meaning the action takes place while petting a dog"
+        "an aspectual prefix meaning the action takes place while petting a dog",
+        "a whistled prestige register",
+        "NPs ordered by relative size",
+        "often-suppletive verbal deictic inflection for all NP arguments",
+        "a special infix for events that happen in dreams",
+        "a different register used only by left-handers",
+        "reduplication to express singular number",
+        "gender marked only on resumptive pronouns"
     ],
 
     });
